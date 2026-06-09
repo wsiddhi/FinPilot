@@ -1,0 +1,44 @@
+<div class="container mt-5">
+
+  <h1>Expenses 💸</h1>
+
+  <table class="table table-bordered mt-4">
+
+    <thead>
+
+      <tr>
+        <th>Merchant</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Date</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let expense of expenses">
+
+        <td>
+          {{ expense.merchant }}
+        </td>
+
+        <td>
+          ₹{{ expense.amount }}
+        </td>
+
+        <td>
+          {{ expense.transaction_type }}
+        </td>
+
+        <td>
+          {{ expense.transaction_date }}
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
