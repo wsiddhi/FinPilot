@@ -32,6 +32,12 @@ urlpatterns = [
         name='token_refresh'
     ),
 
+    # User APIs
+    path(
+        'api/',
+        include('apps.users.urls')
+    ),
+
     # Expense APIs
     path(
         'api/',
