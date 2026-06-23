@@ -1,8 +1,10 @@
+/* --- Existing Styles --- */
 body {
-  background-color: #f8f9fa; /* A subtle light gray */
+  background-color: #f8f9fa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
-/* Add this after your body styles */
 
 .card {
   background: white;
@@ -15,4 +17,35 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* --- New Additions --- */
+
+/* Modern Typography */
+h1, h2, h3 {
+  color: #1a1a1a;
+  margin-top: 0;
+}
+
+/* Primary Button Style */
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Container for layout alignment */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
