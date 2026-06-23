@@ -7,6 +7,12 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="FinPilot - Your personal financial management dashboard.">
+  
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:title" content="FinPilot">
+  <meta property="og:description" content="The ultimate financial management dashboard.">
+  <meta property="og:type" content="website">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Modern Font: Inter -->
@@ -24,7 +30,6 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Simple Dark Mode Support */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #121212;
@@ -32,7 +37,6 @@
       }
     }
 
-    /* Pre-loader Overlay */
     #loader-wrapper {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -55,14 +59,20 @@
   </style>
 </head>
 <body>
-  <!-- Loading indicator -->
+  <!-- No Script Fallback -->
+  <noscript>
+    <div style="text-align: center; padding: 50px; font-family: sans-serif;">
+      <h2>JavaScript is required</h2>
+      <p>Please enable JavaScript to use FinPilot.</p>
+    </div>
+  </noscript>
+
   <div id="loader-wrapper">
     <div class="spinner"></div>
   </div>
 
   <app-root></app-root>
 
-  <!-- Script to hide loader once Angular loads -->
   <script>
     window.addEventListener('load', function() {
       const loader = document.getElementById('loader-wrapper');
